@@ -1,10 +1,10 @@
-import React, { useEffect, useRef, useState, useCallback } from 'react';
+﻿import React, { useEffect, useRef, useState, useCallback } from 'react';
 import { createRoot } from 'react-dom/client';
 import './styles.css';
 
 const videos = [
   {
-    file: '/media/camera.mp4',
+    file: `${import.meta.env.BASE_URL}media/camera.mp4`,
     label: 'Push / Through glass',
     title: 'A camera move that turns a laptop into a portal'
   }
@@ -284,7 +284,7 @@ function App() {
                   muted
                   loop
                   playsInline
-                  poster="/images/poster.svg"
+                  poster={`${import.meta.env.BASE_URL}images/poster.svg`}
                 />
                 <div className="media-overlay">
                   <span>View in Hero Full View 0{i + 1}</span>
